@@ -1,0 +1,72 @@
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          - type: calendar
+            first-day-of-week: monday
+
+      - size: full
+        widgets:
+          - type: server-stats
+            servers:
+              - type: local
+                name: Services
+          - type: rss
+            limit: 10
+            collapse-after: 3
+            cache: 12h
+            feeds:
+              - url: https://feeds.transistor.fm/intotheaether
+                title: Into the Aether Podcast
+              - url: https://feeds.simplecast.com/6WD3bDj7
+                title: Triple Click Podcast
+              - url: https://feeds.strongsongspodcast.com/main
+                title: Strong Songs Podcast
+              - url: https://feeds.transistor.fm/youll-hear-it-music-advice
+                title: You'll Hear It Podcast
+              - url: https://feeds.simplecast.com/Urk3897_
+                title: The Besties Podcast
+          - type: videos
+            channels:
+              - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
+              - UCeGN49q8VjmsJN51aqFfu3w # Open Studio Music
+
+      - size: small
+        widgets:
+          - type: clock
+            hour-format: 12h
+            timezones:
+              - timezone: America/Los_Angeles
+                label: San Francisco
+              - timezone: America/New_York
+                label: New York
+              - timezone: Europe/Paris
+                label: Paris
+          - type: weather
+            location: San Francisco, California, United States
+            units: metric
+            hour-format: 12h
+          - type: calendar
+            first-day-of-week: monday
+
+
+  - name: Homepage
+    columns:
+    - size: full
+      widgets:
+      - type: iframe
+        hide-header: true
+        source: http://truenas.private:30054/
+        height: 800
+
+  - name: Macropad
+    width: wide
+    show-mobile-header: false
+    columns:
+    - size: full
+      widgets:
+      - type: iframe
+        hide-header: true
+        source: http://jincfunc.private:8191
+        height: 400
