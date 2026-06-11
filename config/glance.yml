@@ -47,9 +47,6 @@ pages:
             location: San Francisco, California, United States
             units: metric
             hour-format: 12h
-          - type: calendar
-            first-day-of-week: monday
-
 
   - name: Homepage
     columns:
